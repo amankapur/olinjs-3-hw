@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	title= title
+	h1= 'Listing all Burgers'
+	ul
+		each burg in burgers
+			li
+				span
+					h3= burg.name + " :"
+						each ingr in burg.ingredients
+							=" " +ingr.name  +','
+						button(class="completed", id=burg.id, value='Submit', name='completed') Completed

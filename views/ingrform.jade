@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	title= title
+	h1= 'Make new Ingredient'
+	div(class='form', id='ingrform')
+		label(for='name') Ingredient's name
+		input(id='ingrname', type='text', value='', placeholder='Enter name...', name='name')
+		br
+		br
+		label(for='cost') Ingredient's cost
+		input(id='ingrcost', type='number', value='', placeholder='0', name='cost')
+		br
+		br
+		button(id='ingrsubmit', value='Submit', name='ingrsubmit') Submit

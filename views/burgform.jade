@@ -1,0 +1,21 @@
+extends layout
+
+block content
+	title= title
+	h1= 'Make new Burger'
+	br
+	div(class='form', id='burgform')
+		label(for='name') Burger's name
+		input(id='burgname', type='text', value='', placeholder='Enter name...', name='name')
+		br
+		br
+		label(for='burgingrs') Choose Ingredients
+		br
+		div(id="ingr-list")
+			each ingr in alingrs
+				input(type='checkbox',value=ingr.name, id=ingr.id)
+				=ingr.name + ' $' + ingr.cost
+				br
+			br
+			br	
+			button(id='burgsubmit', value='Submit', name='burgsubmit') Submit
